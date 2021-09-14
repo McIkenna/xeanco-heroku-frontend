@@ -1,0 +1,28 @@
+.reg_cover{
+    padding: 10% 10%;
+    background: linear-gradient(to right, #2b6777 50%, #c8d8e4 50%);
+
+}
+
+.reg_header{
+    background:#2b6777 ;
+    padding: 5%;
+    margin: 5% 0;
+    color: cornsilk;
+    font-family: "Montserrat", "sans-serif";
+}
+
+.login_cover{
+    padding: 10% 10%;
+    background: linear-gradient(to right, #c8d8e4 50%,  #2b6777 50%);
+
+}
+
+.contact_into{
+    color: #c8d8e4;
+}
+
+
+.contact_into h1{
+    font-family:'Varela Round', sans-serif;
+}

@@ -1,0 +1,27 @@
+
+  
+  .card_text {
+    font-size: 2rem;
+    font-family: 'Varela Round', sans-serif;
+    color: #ffff;
+  
+  }
+
+  .card_img_top {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  
+  @media (max-width: 768px) {
+    .card {
+      margin: 10px 20px;
+      width: calc(100% - 40px);
+    }
+    .card_img_top {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+}

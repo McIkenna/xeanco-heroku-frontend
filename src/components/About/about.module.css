@@ -1,0 +1,50 @@
+.aboutContainer{
+    padding:  10% 5%;
+}
+
+
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin: 5% 15%;
+
+}
+
+.card_header{
+    width: 100%;
+    font-family: 'Varela Round', sans-serif;
+}
+.card_body{
+
+}
+
+.card_subTitle{
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+ 
+    font-weight: 500;
+}
+.card_title{
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    text-align: left;
+    font-size: 2em;
+}
+
+.card_text{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+   
+}
+
+@media screen and (max-width:768px) {
+    .card{
+       
+        grid-template-columns: 1fr;
+       
+    
+    }
+}

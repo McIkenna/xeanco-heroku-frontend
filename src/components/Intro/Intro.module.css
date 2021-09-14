@@ -1,0 +1,30 @@
+.intro h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    color: whitesmoke;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    color: whitesmoke;
+  
+}
+.intro{
+    padding-top: 160px;
+}
+
+.text{
+    background-color: #52ab9886;
+    padding: 5%;
+}
+
+#backImage{
+    height:"1280px";
+    width: "100%"
+}
+
+@media screen and (max-width: 768px){
+
+    
+}
