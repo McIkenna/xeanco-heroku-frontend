@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import { getAllProductTasks } from '../../actions/ProductActions'
 import {connect} from "react-redux"
 import PropTypes from "prop-types"
+import Loader from '../Loader'
 
 export class AllProducts extends Component {
     componentDidMount(){
@@ -11,13 +12,29 @@ export class AllProducts extends Component {
         
     }
     render() {
-        const {all_products_tasks} = this.props.product_task;
+        const {all_products_tasks, loading} = this.props.product_task;
         return (
             <div>
                 <div className={styles.task_heading}>
                     <h1>PRODUCTS & SERVICES </h1>
                 </div>
+             
             <div className="container">
+
+            {
+                        loading ? 
+                        <section className="py-5">
+                        <Loader style={
+                         {
+                            height:'100px',
+                            width: '100px',
+                            margin: '10% 50%',
+                            display: 'block'
+                        }}/>
+                        </section>
+                            
+                        
+                           : 
             <div className={styles.task_row}>
             {all_products_tasks.map(
                 task => (
@@ -35,6 +52,7 @@ export class AllProducts extends Component {
             )}    
 
             </div>
+    }
             </div>
 
             </div>

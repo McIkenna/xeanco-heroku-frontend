@@ -1,19 +1,13 @@
 import React from 'react'
 import {Container, Spinner} from "react-bootstrap"
 
-function Loader() {
+function Loader({style}) {
     return (
      
         <Spinner animation="border" role="status"
         variant="success"
         style={
-            {
-                height:'100px',
-                width: '100px',
-                margin: '25% 50%',
-                display: 'block'
-            }
-        }>
+           style}>
         <span className="visually-hidden">Loading...</span>
       </Spinner>
      

@@ -5,6 +5,7 @@ import { getProductTasks } from '../../actions/ProductActions'
 import PropTypes from "prop-types"
 import style from "./product.module.css"
 
+
 export class ProductBoard extends Component {
 
     componentDidMount(){
@@ -15,7 +16,9 @@ export class ProductBoard extends Component {
     render() {
         let {product_tasks} = this.props.product_task;
 
-      
+     
+             
+           
         if(product_tasks.length < 1){
                 return(
                     <div className="'alert alert-danger text-center" role="alert">
@@ -25,15 +28,20 @@ export class ProductBoard extends Component {
             }
             else{
                 return (
+                
                 <div className={style.taskContainer}>
                 {
                 product_tasks.map(product_task => ( <ProductTask  key={product_task.id} product_task={product_task} />))
                 }
                
-            </div>
+            </div>   
+
                 )
             }
         };
+    
+        
+        
     
 }
 
