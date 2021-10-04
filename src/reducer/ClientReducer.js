@@ -2,7 +2,8 @@ import { DELETE_CLIENT, GET_CLIENT, GET_CLIENTS } from "../actions/types";
 
 const initialState = {
     clients: [],
-    client: {}
+    client: {},
+    loading: true
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -11,12 +12,14 @@ export default function(state = initialState, action){
         case GET_CLIENT:
             return {
                 ...state,
-                client: action.payload
+                client: action.payload,
+                loading: false
             }
         case GET_CLIENTS:
             return {
                 ...state,
-                clients: action.payload
+                clients: action.payload,
+                loading: false
             }
         case DELETE_CLIENT:
             return{

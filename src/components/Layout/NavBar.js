@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom"
 import EditorBar from './EditorBar'
+import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 import style from "./Header.module.css"
 import logo from "../../images/logo.png"
 import logo2 from "../../images/xeanco2.png"
@@ -22,7 +23,7 @@ function NavBar() {
         
 
     return (
-    <nav className='navbar navbar-expand-lg navbar-dark' id = {colorChange ? style.navbar_active : style.navbar}>
+      <nav className='navbar navbar-expand-lg navbar-dark' id = {colorChange ? style.navbar_active : style.navbar}>
     <div className="container">
     <Link to="/"><img src={logo} style={{width: "100px"}} alt="..."/></Link>
     <div>

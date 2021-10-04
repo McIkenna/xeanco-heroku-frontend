@@ -2,7 +2,8 @@ import { GET_FEATURE_TASK } from "../actions/types";
 
 
 const initialState = {
-    feature_task : {}
+    feature_task : {},
+    loading: true
 }
 
 
@@ -12,7 +13,8 @@ export default function(state=initialState, action){
         case GET_FEATURE_TASK: 
         return{
             ...state,
-            feature_task: action.payload
+            feature_task: action.payload,
+            loading: false
         }
         default:
             return state

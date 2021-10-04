@@ -3,7 +3,8 @@ import { DELETE_FEATURE, GET_FEATURE, GET_FEATURES } from "../actions/types";
 
 const initialState = {
     features: [],
-    feature: {}
+    feature: {},
+    loading: true
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -12,12 +13,14 @@ export default function(state = initialState, action){
         case GET_FEATURE:
             return {
                 ...state,
-                feature: action.payload
+                feature: action.payload,
+                loading: false
             }
         case GET_FEATURES:
             return {
                 ...state,
-                features: action.payload
+                features: action.payload,
+                loading: false
             }
         case DELETE_FEATURE:
             return{

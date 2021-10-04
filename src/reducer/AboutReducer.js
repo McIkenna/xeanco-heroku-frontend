@@ -2,7 +2,8 @@ import { DELETE_ABOUT, GET_ABOUT, GET_ABOUTS } from "../actions/types";
 
 const initialState = {
     abouts: [],
-    about: {}
+    about: {},
+    loading: true
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -11,12 +12,14 @@ export default function(state = initialState, action){
         case GET_ABOUT:
             return {
                 ...state,
-                about: action.payload
+                about: action.payload,
+                loading: false
             }
         case GET_ABOUTS:
             return {
                 ...state,
-                abouts: action.payload
+                abouts: action.payload,
+                loading: false
             }
         case DELETE_ABOUT:
             return{

@@ -3,7 +3,8 @@ import { DELETE_PRODUCT, GET_PRODUCT, GET_PRODUCTS } from "../actions/types";
 
 const initialState = {
     products: [],
-    product: {}
+    product: {},
+    loading: true
 }
 
 
@@ -13,12 +14,14 @@ export default function(state = initialState, action){
         case GET_PRODUCT:
             return {
                 ...state,
-                product: action.payload
+                product: action.payload,
+                loading: false
             }
         case GET_PRODUCTS:
             return {
                 ...state,
-                products: action.payload
+                products: action.payload,
+                loading: false
             }
         case DELETE_PRODUCT:
             return{

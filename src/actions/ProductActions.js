@@ -18,10 +18,10 @@ export const createProduct = (product, history) => async dispatch => {
 }
 
 export const getProducts = () => async dispatch => {
-    const res = await axios.get(`${proxy}/api/product/all`)
+    const {data} = await axios.get(`${proxy}/api/product/all`)
     dispatch({
         type: GET_PRODUCTS,
-        payload: res.data
+        payload: data
 
     })
 }

@@ -14,7 +14,9 @@ import { getExtras } from '../actions/ExtraAction';
 import ClientItem from './Client/ClientItem';
 import ExtraItem from './Extra/ExtraItem';
 import styles from './Dashboard.module.css';
-import { Carousel } from 'react-bootstrap';
+import { Carousel , Container} from 'react-bootstrap';
+import Loader from './Loader';
+import Message from './message';
 
 export class Dashboard extends Component {
 
@@ -38,7 +40,7 @@ componentDidMount(){
 
     render() {
         let {features} = this.props.feature;
-        let {products} = this.props.product;
+        let {products, loading} = this.props.product;
         let {intros} = this.props.intro;
         let {clients} = this.props.client;
         let {extras} = this.props.extra;
@@ -68,6 +70,15 @@ componentDidMount(){
         }
         return (
             <div>
+                  <main >
+
+{
+                    loading ? 
+                    <section className="py-5">
+                    <Loader />
+                    </section>
+                       : 
+                      <div>
            <section>
                    <div  className={styles.introContainer}>
                <div className={styles.searchBox}>
@@ -90,6 +101,7 @@ componentDidMount(){
             </div>
             </div>
                </section> 
+    
                <section className={styles.feature}>{filteredFeature.map(feature => (<FeatureItem key={feature.featureIdentifier} feature={feature} />))}
               </section> 
               
@@ -117,6 +129,10 @@ componentDidMount(){
                   </div>))}
               </div>
               </div>
+            
+              </div>
+    }
+    </main>
               </div>
           
            
